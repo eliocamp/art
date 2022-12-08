@@ -23,7 +23,7 @@ ol, ul {
 
 a {
   color: #f3c693;
-  
+
 }
 a, a:focus, a:hover {
   text-decoration: none;
@@ -147,7 +147,7 @@ blockquote p {
 }
 
 .splash-image {
-  height: 100vh;
+  height: 30vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
