@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.Rdata
+resources
+public
+.httr-oauth
+.DS_Store
+
+gallery/*/imgs/
