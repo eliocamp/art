@@ -6,18 +6,8 @@ summary: ''
 trailer: "gallery/turtles/splash.png"
 # trailer: "./splash.png"
 splash:
-  caption: "For some reason I decided that flying turtles with cities within their shells are cute and interesting. Probably some unconscious influence by Great A'Tuin"
+  caption: "For some reason I decided that flying turtles with cities in their shells are cute and interesting"
 ---
-
-<style>
-.splash-caption-tweak{
-  color: #ffffff99;
-  font-size: 120%;
-  text-align: center;
-  letter-spacing: 20px;
-}
-</style>
-
 
 {{< foldergallery src="gallery/turtles/imgs" >}}
 
