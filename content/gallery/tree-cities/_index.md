@@ -6,7 +6,7 @@ summary: ''
 trailer: "gallery/tree-cities/splash.png"
 # trailer: "./splash.png"
 splash:
-  caption: "Arbour cities"
+  caption: "There are other oasis in which cities can thrive besides turtles"
 ---
 
 asdfasfasdf

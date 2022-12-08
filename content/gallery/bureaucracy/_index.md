@@ -6,10 +6,8 @@ summary: ''
 trailer: "gallery/bureaucracy/splash.png"
 # trailer: "./splash.png"
 splash:
-  caption: "Bureaucracy"
+  caption: "Inspired by real-life encounters with the bureaucracy monster"
 ---
-
-
 
 <style>
 .splash-caption-tweak{

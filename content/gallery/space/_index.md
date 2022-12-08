@@ -6,7 +6,7 @@ summary: ''
 trailer: "gallery/space/splash.png"
 # trailer: "./splash.png"
 splash:
-  caption: "Space"
+  caption: "Sometimes a simple person needs the simple pleasures of trippy space stuff"
 ---
 
 
