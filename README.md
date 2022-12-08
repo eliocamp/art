@@ -1,1 +1,3 @@
-https://art.djnavarro.net
+eliocamp.github.io/art
+
+Based on https://github.com/djnavarro/art

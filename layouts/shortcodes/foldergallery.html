@@ -27,12 +27,17 @@
         {{/* don't try to display .DS_Store or directories */}}
         {{ if and (ne .Name ".DS_Store") (not .IsDir)  }}
             {{ $src := print "/" $url "/" .Name }}
+            {{ $where := print $path "/" .Name }}
+            {{ $thumb := replace .Name ".png" "-512.png" }}
+            {{ $urlthumb := replace $url "imgs" "thumbs" }}
+            {{ $thumb := print "/" $urlthumb "/" $thumb }}
+
             {{/*
                 troubleshoot the $src variable as needed
                 <!-- <p>{{ $src }}</p> -->
                 */}}
             <a data-fancybox="gallery" href="{{ $src }}">
-                <img src="{{ $src }}">  <br/>
+                <img src="{{ $thumb }}">  <br/>
             </a>
         {{ end }}
     {{ end }}
