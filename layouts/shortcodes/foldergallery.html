@@ -28,7 +28,7 @@
         {{ if and (ne .Name ".DS_Store") (not .IsDir)  }}
             {{ $src := print "/" $url "/" .Name }}
             {{ $where := print $path "/" .Name }}
-            {{ $thumb := replace .Name ".png" "-512.png" }}
+            {{ $thumb := print .Name }}
             {{ $urlthumb := replace $url "imgs" "thumbs" }}
             {{ $thumb := print "/" $urlthumb "/" $thumb }}
 
