@@ -23,7 +23,7 @@
 <div class="gallery">
     {{ $path := print "content/" (.Get "src")  }}
     {{ $url  := print (.Get "src") }}
-    {{ range (readDir $path)  }}
+    {{ range sort (readDir $path)  "Name" "desc" }}
         {{/* don't try to display .DS_Store or directories */}}
         {{ if and (ne .Name ".DS_Store") (not .IsDir)  }}
             {{ $src := print "/" $url "/" .Name }}
