@@ -1,7 +1,7 @@
 ---
 output: hugodown::md_document
 title: "Platensefuturismo"
-date: 2023-12-27
+date: 2023-09-23
 summary: ''
 trailer: "gallery/platensefuturismo/splash.jpg"
 splash:
