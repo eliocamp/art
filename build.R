@@ -2,10 +2,32 @@
 galleries <- list.files(file.path("content", "gallery"))
 
 populate_gallery <- function(gallery) {
-  message("(Re) Creando ", gallery)
+
   root_folder <- file.path("content", "gallery", gallery)
 
   config <- yaml::read_yaml(file.path(root_folder, "_index.md"))
+
+  files <- list.files(config$src, full.names = TRUE, pattern = ".png")
+
+  hash <- unname(vapply(files, \(file) digest::digest(file = file), character(1))) |>
+    digest::digest()
+
+  if (file.exists(file.path(root_folder, "hash"))) {
+    old_hash <- readLines(file.path(root_folder, "hash")) |>
+      _[1]
+  } else {
+    old_hash <- ""
+  }
+
+  if (hash == old_hash) {
+    message("No hay cambios en ", gallery, ".")
+    return(invisible(0))
+  }
+
+  message("(Re) Creando ", gallery, ".")
+
+  writeLines(hash,  file.path(root_folder, "hash"))
+
   imgs_folder <- file.path(root_folder, "imgs")
   thumbs_folder <- file.path(root_folder, "thumbs")
 
@@ -38,7 +60,7 @@ populate_gallery <- function(gallery) {
 
   system(paste("mogrify -resize 512x521", shQuote(file.path(root_folder, "splash.jpg"))))
 
-
+  invisible(0)
 }
 
 lapply(galleries, populate_gallery)
